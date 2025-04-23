@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 namespace VillaIn
 {
-    public partial class Form1 : Form
+    public partial class Loginform : Form
     {
-        public Form1()
+        public Loginform()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
         }
     }

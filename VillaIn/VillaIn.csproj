@@ -52,11 +52,11 @@
     <Compile Include="Admin Form.Designer.cs">
       <DependentUpon>Admin Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Loginform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Loginform.Designer.cs">
+      <DependentUpon>Loginform.cs</DependentUpon>
     </Compile>
     <Compile Include="PemilikVillaForm.cs">
       <SubType>Form</SubType>
@@ -69,8 +69,8 @@
     <EmbeddedResource Include="Admin Form.resx">
       <DependentUpon>Admin Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Loginform.resx">
+      <DependentUpon>Loginform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PemilikVillaForm.resx">
       <DependentUpon>PemilikVillaForm.cs</DependentUpon>
