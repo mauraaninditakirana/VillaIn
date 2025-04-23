@@ -22,7 +22,7 @@ namespace VillaIn
 
         private void Admin_Form_Load(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain
+            string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain";
                  using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
