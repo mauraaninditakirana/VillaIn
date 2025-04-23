@@ -33,7 +33,26 @@ namespace VillaIn
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
+                    if (reader.Read())
+                    {
+                        string idPengguna = reader["id_pengguna"].ToString();
+                        string role = reader["role"].ToString();
+
+                        MessageBox.Show("Login berhasil sebagai: " + role); // debug
+
+                        if (role == "admin")
+                        {
+                            AdminForm admin = new AdminForm(idPengguna);
+                            admin.Show();
+                        }
+                        else if (role == "pemilik")
+                        {
+                            PemilikVillaForm pemilik = new PemilikVillaForm(idPengguna);
+                            pemilik.Show();
+                        }
+
+                    }
                 }
-    }
 }
