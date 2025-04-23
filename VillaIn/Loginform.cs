@@ -58,7 +58,13 @@ namespace VillaIn
                     {
                         MessageBox.Show("Username atau password salah!");
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Koneksi gagal: " + ex.Message);
+                }
+            }
 
-                }
-                }
+        }
+    }
 }
