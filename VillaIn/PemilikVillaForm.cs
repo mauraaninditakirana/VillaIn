@@ -29,6 +29,13 @@ namespace VillaIn
                 string query = "SELECT * FROM transaksi WHERE id_pengguna = @id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", "PG001"); // ID bisa dari session/login
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
             }
+
+        }
     }
 }
