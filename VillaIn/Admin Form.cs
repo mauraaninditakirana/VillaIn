@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,10 @@ namespace VillaIn
         private void Admin_Form_Load(object sender, EventArgs e)
         {
             string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain
+                 using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+
+            }
         }
         private void label10_Click(object sender, EventArgs e)
         {
