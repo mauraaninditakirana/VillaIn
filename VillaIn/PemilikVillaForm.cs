@@ -24,6 +24,9 @@ namespace VillaIn
         {
             string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(connectionString))
-        }
+            {
+                conn.Open();
+                string query = "SELECT * FROM transaksi WHERE id_pengguna = @id";
+            }
     }
 }
