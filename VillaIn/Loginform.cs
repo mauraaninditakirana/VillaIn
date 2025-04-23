@@ -52,7 +52,13 @@ namespace VillaIn
                             PemilikVillaForm pemilik = new PemilikVillaForm(idPengguna);
                             pemilik.Show();
                         }
-
+                        this.Hide(); // sembunyikan login
                     }
+                    else
+                    {
+                        MessageBox.Show("Username atau password salah!");
+                    }
+
+                }
                 }
 }
