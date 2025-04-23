@@ -12,9 +12,11 @@ namespace VillaIn
 {
     public partial class PemilikVillaForm : Form
     {
-        public PemilikVillaForm()
+        private string idPengguna;
+        public PemilikVillaForm(string idPengguna)
         {
             InitializeComponent();
+            this.idPengguna = idPengguna;
         }
 
         private void button1_Click(object sender, EventArgs e)

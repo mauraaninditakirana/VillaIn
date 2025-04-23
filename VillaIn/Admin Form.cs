@@ -12,9 +12,11 @@ namespace VillaIn
 {
     public partial class Admin_Form : Form
     {
-        public Admin_Form()
+        private string idPengguna;
+        public Admin_Form(string idPengguna)
         {
             InitializeComponent();
+            this.idPengguna = idPengguna;
         }
 
         private void label10_Click(object sender, EventArgs e)

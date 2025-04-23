@@ -20,8 +20,9 @@ namespace VillaIn
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string username = TUsername.Text;
+            string password = TPassword.Text;
+
             string connectionString = "Data Source=MSI\\RM_FAKHRI_W;Initial Catalog=Villain;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -44,7 +45,7 @@ namespace VillaIn
 
                         if (role == "admin")
                         {
-                            AdminForm admin = new AdminForm(idPengguna);
+                            Admin_Form admin = new Admin_Form(idPengguna);
                             admin.Show();
                         }
                         else if (role == "pemilik")
@@ -58,6 +59,7 @@ namespace VillaIn
                     {
                         MessageBox.Show("Username atau password salah!");
                     }
+
                 }
                 catch (Exception ex)
                 {
