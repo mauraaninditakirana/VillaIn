@@ -27,6 +27,8 @@ namespace VillaIn
             {
                 conn.Open();
                 string query = "SELECT * FROM transaksi WHERE id_pengguna = @id";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", "PG001"); // ID bisa dari session/login
             }
     }
 }
