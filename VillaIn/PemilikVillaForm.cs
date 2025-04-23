@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,10 @@ namespace VillaIn
             this.idPengguna = idPengguna;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnInsert1_Click(object sender, EventArgs e)
         {
-
+            string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain;Integrated Security=True";
+            using (SqlConnection conn = new SqlConnection(connectionString))
         }
     }
 }

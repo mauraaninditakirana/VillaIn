@@ -37,7 +37,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInsert1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -117,15 +117,15 @@
             this.textBox6.Size = new System.Drawing.Size(167, 26);
             this.textBox6.TabIndex = 8;
             // 
-            // button1
+            // btnInsert1
             // 
-            this.button1.Location = new System.Drawing.Point(280, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnInsert1.Location = new System.Drawing.Point(280, 144);
+            this.btnInsert1.Name = "btnInsert1";
+            this.btnInsert1.Size = new System.Drawing.Size(75, 25);
+            this.btnInsert1.TabIndex = 9;
+            this.btnInsert1.Text = "Insert";
+            this.btnInsert1.UseVisualStyleBackColor = true;
+            this.btnInsert1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -203,7 +203,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnInsert1);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -232,7 +232,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInsert1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

@@ -23,7 +23,7 @@ namespace VillaIn
             string username = TUsername.Text;
             string password = TPassword.Text;
 
-            string connectionString = "Data Source=MSI\\RM_FAKHRI_W;Initial Catalog=Villain;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain;Integrated Security=True";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
