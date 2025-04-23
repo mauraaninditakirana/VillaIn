@@ -19,6 +19,10 @@ namespace VillaIn
             this.idPengguna = idPengguna;
         }
 
+        private void Admin_Form_Load(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain
+        }
         private void label10_Click(object sender, EventArgs e)
         {
 
@@ -26,7 +30,7 @@ namespace VillaIn
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain;Integrated Security=True;";
+            
         }
     }
 }
