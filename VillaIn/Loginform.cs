@@ -1,29 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using VillaIn;
 
-namespace VillaIn
+namespace VillaIn   
 {
-    public partial class Loginform : Form
+    public partial class Login : Form
     {
-        public Loginform()
+        public Login()
         {
             InitializeComponent();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = TUsername.Text;
-            string password = TPassword.Text;
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
-            string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-08ADTL81\\MAURAANINDITAK;Initial Catalog=Villain;Integrated Security=True;";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
@@ -34,6 +28,7 @@ namespace VillaIn
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
+
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
@@ -45,7 +40,7 @@ namespace VillaIn
 
                         if (role == "admin")
                         {
-                            Admin_Form admin = new Admin_Form(idPengguna);
+                            AdminForm admin = new AdminForm(idPengguna);
                             admin.Show();
                         }
                         else if (role == "pemilik")
@@ -53,6 +48,7 @@ namespace VillaIn
                             PemilikVillaForm pemilik = new PemilikVillaForm(idPengguna);
                             pemilik.Show();
                         }
+
                         this.Hide(); // sembunyikan login
                     }
                     else
@@ -66,7 +62,6 @@ namespace VillaIn
                     MessageBox.Show("Koneksi gagal: " + ex.Message);
                 }
             }
-
         }
     }
 }
